@@ -1,0 +1,17 @@
+{
+  "name": "ts-interview",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test1": "ts-node test3-mapObject.ts",
+    "test2": "ts-node test4-getDeepPaths.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
