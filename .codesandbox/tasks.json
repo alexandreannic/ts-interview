@@ -1,0 +1,30 @@
+{
+  "setupTasks": [
+    {
+      "command": "npm install",
+      "name": "Install Dependencies"
+    }
+  ],
+  "tasks": {
+    "test1": {
+      "name": "test1",
+      "command": "npm run test1",
+      "runAtStart": false
+    },
+    "test2": {
+      "name": "test2",
+      "command": "npm run test2",
+      "runAtStart": false
+    },
+    "test3": {
+      "name": "test3",
+      "command": "npm run test3",
+      "runAtStart": false
+    },
+    "test4": {
+      "name": "test4",
+      "command": "npm run test4",
+      "runAtStart": false
+    }
+  }
+}
