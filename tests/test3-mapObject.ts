@@ -9,8 +9,15 @@ test('mapObject', () => {
   //  2. Use TypeScript generics to ensure type safety.
   //  3. Preserve the keys and map the values to a new type based on the mapping function.
 
-  const mapObjectValue = (obj: any, fn: any) => {
+  const mapObjectValue = <T extends Record<string, any>, R>(obj: T, fn: (_: T[keyof T]) => R): Record<keyof T, R> => {
+    const newObject: any = {}
+    Object.keys(obj).forEach(key => {
+      newObject[key] = fn(obj[key])
+    })
+    return newObject
   }
+
+  const res = mapObjectValue({a: 1, b: 2, c: 3}, (_: any) => '' + _)
 
   assert.deepEqual(mapObjectValue({a: 1, b: 2, c: 3}, (_: any) => _ * 2), {a: 2, b: 4, c: 6})
   assert.deepEqual(mapObjectValue({a: 'a', b: 'b', c: 'c'}, (_: any) => _ + '_'), {a: 'a_', b: 'b_', c: 'c_'})
