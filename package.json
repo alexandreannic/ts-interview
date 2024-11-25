@@ -6,7 +6,8 @@
     "test1": "ts-node tests/test1-sumArray.ts",
     "test2": "ts-node tests/test2-getKeys.ts",
     "test3": "ts-node tests/test3-mapObject.ts",
-    "test4": "ts-node tests/test4-getDeepPaths.ts"
+    "test4": "ts-node tests/test4-groupBy.ts",
+    "test5": "ts-node tests/test5-getDeepPaths.ts"
   },
   "author": "",
   "license": "ISC",
